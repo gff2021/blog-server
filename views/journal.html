@@ -1,0 +1,79 @@
+{{extend './common/layout.html'}}
+
+{{block 'style'}}
+    <link rel="stylesheet" href="/blog/css/journal/journal.css">
+{{/block}}
+
+{{block 'content'}}
+    <div class="content">
+        <ul class="log-list" id="journalListContainer">
+            <!-- {{each journalList}}
+                <li>
+                    <p class="log-abstract">{{$value.abstract}}</p>
+                    <p class="log-content">{{$value.content}}</p>
+                    <p class="log-date">发布于{{$value.createTime}}</p>
+                </li>
+            {{/each}} -->
+        </ul>
+        <!-- <ul class="log-pagination" id="pagination">
+            <li id="prevPage"><a href="/blog/journal?page={{currentPage - 1}}"><span class="icon-arrow-left2"></span></a></li>
+            {{if totalPage <= 11}}
+                <% for (let i = 1; i <= totalPage; i++) { %>
+                    {{if currentPage === i}}
+                        <li class="active"><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                    {{else if currentPage !== i}}
+                        <li><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                    {{/if}}
+                <% } %>
+            {{else if totalPage > 11}}
+                {{if currentPage <= 5}}
+                    <% for (let i = 1; i <= 6; i++) { %>
+                        {{if currentPage === i}}
+                            <li class="active"><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                        {{else if currentPage !== i}}
+                            <li><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                        {{/if}}
+                    <% } %>
+                    <li>...</li>
+                    <% for (let i = totalPage - 5; i <= totalPage; i++) { %>
+                        <li><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                    <% } %>
+                {{else if currentPage >= totalPage - 4}}
+                    <% for (let i = 1; i <= 6; i++) { %>
+                        <li><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                    <% } %>
+                    <li>...</li>
+                    <% for (let i = totalPage - 5; i <= totalPage; i++) { %>
+                        {{if currentPage === i}}
+                            <li class="active"><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                        {{else if currentPage !== i}}
+                            <li><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                        {{/if}}
+                    <% } %>
+                {{else if currentPage > 5 && currentPage < totalPage - 4}}
+                    <% for (let i = 1; i <= 3; i++) { %>
+                        <li><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                    <% } %>
+                    <li>...</li>
+                    <% for (let i = currentPage - 1; i <= currentPage + 1; i++) { %>
+                        {{if currentPage === i}}
+                            <li class="active"><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                        {{else if currentPage !== i}}
+                            <li><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                        {{/if}}
+                    <% } %>
+                    <li>...</li>
+                    <% for (let i = totalPage - 2; i <= totalPage; i++) { %>
+                        <li><a href="/blog/journal?page=<%= i %>"><%= i %></a></li>
+                    <% } %>
+                {{/if}}
+            {{/if}}
+            <li id="nextPage"><a href="/blog/journal?page={{currentPage + 1}}"><span class="icon-arrow-right2"></span></a></li>
+        </ul> -->
+        <div id="pagination"></div>
+    </div>
+{{/block}}
+
+{{block 'script'}}
+    <script src="/blog/js/journal/journal.js"></script>
+{{/block}}

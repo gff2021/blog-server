@@ -1,0 +1,75 @@
+.content {
+    padding: 2.5rem 1.25rem;
+    background: rgba(255, 255, 255, .3);
+    border-radius: .625rem;
+}
+
+.log-list li {
+    padding: .625rem 1.25rem;
+    background: rgb(240, 206, 95);
+    border-radius: .625rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+    letter-spacing: .0625rem;
+}
+
+.log-list .log-abstract {
+    padding: .625rem 0;
+    font-style: italic;
+}
+
+.log-list .log-content {
+    padding: .3125rem 0;
+    text-indent: 2em;
+}
+
+.log-list .log-date {
+    padding: .625rem 0 0 0;
+    text-align: right;
+    font-size: .875rem;
+    border-top: .0625rem dashed #fff;
+}
+
+.log-pagination {
+    text-align: center;
+}
+
+.log-pagination li {
+    display: inline-block;
+    width: 1.875rem;
+    height: 1.875rem;
+    margin: 0 .3125rem;
+    border: .0625rem solid #fff;
+    border-radius: .3125rem;
+    color: #fff;
+    line-height: 1.875rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.log-pagination li:hover {
+    border: .0625rem solid dodgerblue;
+    color: dodgerblue;
+}
+
+.log-pagination li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: all .3s;
+}
+
+.log-pagination li:hover a {
+    color: dodgerblue;
+}
+
+.log-pagination .active {
+    border: .0625rem solid dodgerblue;
+}
+
+.log-pagination .active a {
+    color: dodgerblue;
+}

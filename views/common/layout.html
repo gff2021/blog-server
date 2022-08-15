@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+    <title>{{block 'title'}}半米之内{{/block}}</title>
+    <link rel="stylesheet" href="/blog/icomoon/style.css">
+    <link rel="stylesheet" href="/blog/css/common/reset.css">
+    <link rel="stylesheet" href="/blog/css/common/layout.css">
+    {{block 'style'}}{{/block}}
+</head>
+<body>
+    <canvas id="canvas" class="canvas">您的浏览器版本过低,请升级最新版本浏览器.</canvas>
+    <div class="layout-header" id="layoutHeader">
+       <div class="main">
+           <div class="header-top">
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="/blog">
+                                <span class="icon-pencil"></span>
+                                <span>文章</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog/jotting">
+                                <span class="icon-quill"></span>
+                                <span>随笔</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog/picture">
+                                <span class="icon-images"></span>
+                                <span>图库</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog/journal">
+                                <span class="icon-list2"></span>
+                                <span>日志</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog/about">
+                                <span class="icon-file-text"></span>
+                                <span>关于本站</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin">
+                                <span class="icon-cog"></span>
+                                <span>管理后台</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="photo">
+                    <img src="/blog/images/head.jpg" alt="">
+                </div>
+           </div>
+           <div class="header-btm">
+                <p class="clock-container" >
+                    <span id="clock"></span>
+                </p>
+           </div>
+       </div>
+    </div>
+    <div class="layout-body">
+        <div class="main">
+            {{block 'content'}}{{/block}}
+        </div>
+    </div>
+    <div class="layout-footer">
+        <p class="record-number">
+            <a href="https://beian.miit.gov.cn/" target="new_window">京ICP备&nbsp;2022004047号-1</a>
+            <a href="https://beian.miit.gov.cn/" target="new_window">京公安备&nbsp;2022004047号-1</a>
+        </p>
+    </div>
+    <script src="/blog/js/common/methods.js"></script>
+    <script src="/blog/js/common/service.js"></script>
+    <script src="/blog/js/common/starsCursor.js"></script>
+    <script src="/blog/js/common/layout.js"></script>
+    <script src="/blog/js/common/pagination.js"></script>
+    {{block 'script'}}{{/block}}
+</body>
+</html>
